@@ -1,4 +1,4 @@
-## About Booking Core Version 3.0.0
+## About BookingManagement
 Booking Core is a Booking System based on Laravel, designed for a travel website, Marketplace, Travel Agency, Tour Operator, Room Bnb, Villa Rental, Resort Rental, Make Travel website. With 6+ years working on travel products we confident to bring to you best product for your travel site with optimized UX/UI, friendly on mobile on the search engine.
 
 ## Main Features:
@@ -26,8 +26,8 @@ Booking Core is a Booking System based on Laravel, designed for a travel website
 
 6. Razorpay
 
-### Get Support: [Click here](https://bookingcore.org)
+### Get Support: [Click here](https://shahreyar.in)
 
-### Join our Discord: [https://discord.gg/FBP3TuFXCe](https://discord.gg/FBP3TuFX)
+### Author: [Shahreyar](https://shahreyar.in)
 
-### Author: [BookingCore Team](https://codecanyon.net/user/bookingcore)
+<a href = "https://Shahreyar.in"> Contact Me </a>
