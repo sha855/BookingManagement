@@ -1,0 +1,2 @@
+@include("Layout::admin.app")
+

@@ -1,0 +1,1 @@
+<?php /**PATH /Users/pro/Desktop/readyForSell/BookingManagement/themes/BC/Tour/Views/frontend/blocks/list-tour/index.blade.php ENDPATH**/ ?>

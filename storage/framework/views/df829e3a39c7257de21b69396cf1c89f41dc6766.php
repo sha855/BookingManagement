@@ -1,0 +1,1 @@
+<?php /**PATH /Users/pro/Desktop/readyForSell/BookingManagement/modules/Layout/parts/topbar.blade.php ENDPATH**/ ?>

@@ -1,0 +1,1 @@
+<?php /**PATH /Users/pro/Desktop/readyForSell/BookingManagement/themes/Base/Template/Views/frontend/blocks/offer-block/index.blade.php ENDPATH**/ ?>

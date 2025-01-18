@@ -1,0 +1,446 @@
+ 
+ .br-button{
+  
+  border: navajowhite;
+
+ }
+
+
+ .accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+/*    transition: 0.4s;*/
+    border-radius:12px;
+  }
+   
+   .form-control[type=file]:not(:disabled):not([readonly]) {
+    cursor: pointer;
+    padding: 8px;
+    background: linear-gradient(180deg, #FE9000 0%, #FF3500 100%);
+
+
+   }
+.card{
+
+  cursor: pointer;
+}
+
+  .active,
+  .accordion:hover {
+    background-color: #ccc;
+  }
+
+  .accordion:after {
+    content: '\002B';
+    color: #777;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+  }
+
+  .active:after {
+    content: "\2212";
+  }
+
+  .panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+  }
+
+  .wizard-sample-1 {
+    height: 520px;
+    width: 100%;
+  }
+
+  /* {*/
+  
+  /*  max-width: 100%;*/
+  /*  overflow-x: hidden;*/
+  /*  overflow-y: hidden;*/
+  /*}*/
+
+  [vertical] .wizard-progress {
+    float: left;
+    grid-template-columns: 1fr;
+    height: 100%;
+    max-width: 260px;
+    overflow-x: hidden;
+    padding-top: 0;
+    position: relative;
+    text-align: right;
+  }
+
+  [vertical] .wizard-progress .wizard-progress-btn {
+    height: 100%;
+    line-height: 100%;
+    max-height: 100%;
+    padding-bottom: 0;
+    padding-right: 70px;
+    padding-top: 0;
+    text-align: right;
+  }
+
+  [vertical] .wizard-progress .wizard-progress-btn::before {
+    left: calc(100% - 32px);
+    line-height: 26px;
+    margin-top: calc(var(--spacing-scale-2x) * -1);
+    position: absolute;
+    text-align: center;
+    top: 50%;
+  }
+
+  @media (max-width: 991px) {
+ 
+/*
+     .wizard-form {
+      height: calc(100% - 100px);
+    }*/
+
+  
+    [collapsed] .wizard-progress::after {
+      margin-top: var(--spacing-scale-4xh);
+    }
+
+    [collapsed] .wizard-progress .wizard-progress-btn {
+      padding-bottom: var(--spacing-scale-base);
+    }
+
+    [collapsed] .wizard-progress .wizard-progress-btn .info {
+      display: none;
+    }
+
+   /* [collapsed] .wizard-form {
+      height: calc(100% - 64px);
+    }*/
+
+    [collapsed] .wizard-form .wizard-panel .wizard-panel-content {
+      overflow-x: hidden;
+      overflow-y: auto;
+    }
+
+    [vertical] .wizard-progress {
+      max-height: 100%;
+      max-width: 110px;
+    }
+
+    [vertical] .wizard-progress::after {
+      height: 1em;
+      left: unset;
+      margin-top: -0.5em;
+      right: 2px;
+      top: 50%;
+      transform: rotate(-90deg);
+      width: 1em;
+    }
+
+    [vertical] .wizard-progress .wizard-progress-btn {
+      line-height: 18px;
+      padding-right: var(--spacing-scale-7x);
+    }
+
+    [vertical] .wizard-progress .wizard-progress-btn .info {
+      line-height: 1.6em;
+      margin-top: -0.5em;
+      position: absolute;
+      right: 54px;
+    }
+
+   /* [vertical] .wizard-form {
+      height: 100%;
+      max-width: calc(100% - 110px);
+      min-width: calc(100% - 110px);
+      transition-delay: 0s;
+      transition-duration: 0.25s;
+      transition-property: all;
+      transition-timing-function: linear;
+    }
+
+    [vertical] .wizard-form .wizard-panel {
+      height: 100%;
+      max-height: 100%;
+    }*/
+
+    [vertical][collapsed] .wizard-progress {
+      max-width: 60px;
+      padding-bottom: 0;
+      padding-top: 0;
+    }
+
+    [vertical][collapsed] .wizard-progress .wizard-progress-btn {
+      padding-right: 0;
+    }
+
+    [vertical][collapsed] .wizard-progress .wizard-progress-btn .info {
+      display: none;
+    }
+
+    [vertical][collapsed] .wizard-form {
+      max-width: calc(100% - 60px);
+      min-width: calc(100% - 60px);
+    }
+  }
+
+   .wizard-progress {
+    background-color: var(--background-alternative);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+    grid-template-rows: none;
+    min-height: 100px;
+    position: relative;
+    top: 25px;
+    padding-top: var(--spacing-scale-7x);
+    width: 100%;
+  }
+
+   .wizard-progress .wizard-progress-btn {
+    background-color: transparent;
+    border: 0;
+    box-shadow: none !important;
+    color: var(--interactive);
+    font-size: var(--font-size-scale-up-01, 16.8px);
+    line-height: 19px;
+    max-height: 90px;
+    padding-bottom: 0;
+    padding-top: var(--spacing-scale-2x);
+    position: relative;
+    text-indent: 0;
+    transition-delay: 0s;
+    transition-duration: 0.15s;
+    transition-property: all;
+    transition-timing-function: linear;
+  }
+
+   .wizard-progress .wizard-progress-btn[disabled] {
+    color: rgba(var(--interactive-rgb), var(--disabled));
+    opacity: 1;
+  }
+
+   .wizard-progress .wizard-progress-btn[disabled]::before {
+    opacity: var(--disabled);
+  }
+
+   .wizard-progress .wizard-progress-btn:focus {
+    outline: none;
+  }
+
+   .wizard-progress .wizard-progress-btn.focus-visible:not([disabled]):not(.disabled)::before,
+   .wizard-progress .wizard-progress-btn:focus-visible:not([disabled]):not(.disabled)::before {
+    outline-color: var(--focus-color);
+    outline-offset: var(--focus-offset);
+    outline-style: var(--focus-style);
+    outline-width: var(--focus-width);
+  }
+
+   .wizard-progress .wizard-progress-btn:hover:not([disabled])::before {
+    background-image: linear-gradient(rgba(var(--interactive-rgb), var(--hover)), rgba(var(--interactive-rgb), var(--hover)));
+  }
+
+   .wizard-progress .wizard-progress-btn:active:not([disabled])::before {
+    background-image: linear-gradient(rgba(var(--interactive-rgb), var(--pressed)), rgba(var(--interactive-rgb), var(--pressed)));
+  }
+
+   .wizard-progress .wizard-progress-btn::before {
+    background-color: var(--background-light);
+    border: 2px solid #FF3500;
+    border-radius: 50%;
+    box-sizing: border-box;
+    color: #FF3500;
+    content: attr(step) !important;
+    display: block;
+    font-size: var(--font-size-scale-up-02, 20.16px);
+    font-weight: var(--font-weight-semi-bold, 600);
+    height: 36px;
+    left: 50%;
+    line-height: 29px;
+    margin-top: -13px;
+    position: absolute;
+    top: 0;
+    transform: translateX(-50%);
+    transition: all 0.15s linear 0s, -webkit-transform 0.15s cubic-bezier(0.05, 1.09, 0.16, 1.4) 0s;
+    transition: all 0.15s linear 0s, transform 0.15s cubic-bezier(0.05, 1.09, 0.16, 1.4) 0s;
+    transition: all 0.15s linear 0s, transform 0.15s cubic-bezier(0.05, 1.09, 0.16, 1.4) 0s, -webkit-transform 0.15s cubic-bezier(0.05, 1.09, 0.16, 1.4) 0s;
+    width: 36px;
+    z-index: 3;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ .wizard-progress .wizard-progress-btn::after {
+    background-color: #FF3500 !important;
+    content: "";
+    display: block;
+    height: 4px;
+    left: calc(-50% + 17px);
+    position: absolute;
+    top: 5px;
+    transition-delay: 0s;
+    transition-duration: 0.15s;
+    transition-property: all;
+    transition-timing-function: linear;
+    width: calc(100% - 34px);
+    z-index: 1;
+  }
+
+   .wizard-progress .wizard-progress-btn:first-child::after {
+    display: none;
+  }
+
+   .wizard-progress .wizard-progress-btn[active] {
+    color: var(--active);
+    font-weight: var(--font-weight-semi-bold, 600);
+  }
+
+   .wizard-progress .wizard-progress-btn[active]::after {
+    background-color: linear-gradient(180deg, #FE9000 0%, #FF3500 100%);
+    height: 4px;
+  }
+
+   .wizard-progress .wizard-progress-btn[active]::before {
+    background: linear-gradient(180deg, #FE9000 0%, #FF3500 100%);
+    border: 2px solid #FF3500;
+    color: var(--background-light);
+    font-weight: var(--font-weight-bold, 700);
+  }
+
+   .wizard-form {
+    /*color: var(--color);
+    height: calc(100% - 164px);*/
+    position: relative;
+  }
+
+   .wizard-form .wizard-panel {
+
+    opacity: 0;
+   
+    visibility: hidden;
+    width: 100%;
+  }
+
+   .wizard-form .wizard-panel[active] {
+
+
+    opacity: 1;
+  
+    visibility: visible;
+  }
+
+ #userRegisterForm{
+
+  margin-top: -500px;
+ }
+
+
+   .wizard-form .wizard-panel .wizard-panel-content {
+    border-top: 1px solid var(--border-color);
+    flex-grow: 1;
+    height: auto;
+    max-height: calc(100% - 74px);
+    overflow-x: hidden;
+    overflow-y: auto;
+/*    padding: var(--spacing-scale-base) var(--spacing-scale-2x);*/
+  }
+
+   .wizard-form .wizard-panel .wizard-panel-content> :last-child {
+    margin-bottom: 220px;
+  }
+
+   .wizard-form .wizard-panel .wizard-panel-btn {
+   top: -13px;
+    align-self: flex-end;
+    background-color: var(--background-alternative);
+    border-top: 1px solid var(--border-color);
+    height: fit-content;
+    margin-top: 29px;
+/*    padding: var(--spacing-scale-2x) 1.5%;*/
+    width: 100%;
+    position: relative;
+  }
+
+   .wizard-form .wizard-panel .wizard-btn-next,
+   .wizard-form .wizard-panel .wizard-btn,
+   .wizard-form .wizard-panel .wizard-btn-prev {
+    float: right;
+    margin-left: var(--spacing-scale-2x);
+  }
+
+   .wizard-form .wizard-panel .wizard-btn-canc {
+    float: left;
+  }
+
+  
+  .br-button {
+    padding: 10px;
+    border-radius: 12px;
+
+  }
+
+
+
+  .custom-file-input-placeholder {
+    position: relative;
+    overflow: hidden;
+  }
+
+ .custom-file-input {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: calc(1.5em + 0.75rem + 2px);
+    margin: 0;
+    opacity: 0;
+    bottom: -11px;
+}
+
+  .custom-file-input-placeholder input[type="file"] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    font-size: 100px;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+  }
+
+  .custom-file-input-placeholder input[type="text"] {
+    width: 100%;
+  }
+
+  .showFileInput {
+    margin-top: -33px;
+}
+
+.imageClass{
+
+  position: relative;
+    float: right;
+    top: -37px;
+    left: -1px;
+    background: #FFF3E3;
+}
+
